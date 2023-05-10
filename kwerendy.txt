@@ -1,0 +1,6 @@
+1. SELECT Tytul, Gatunek FROM `filmy` WHERE Gatunek = 'komedia' OR Gatunek = 'sensacja';
+2. SELECT Tytul, Nazwisko FROM `filmy`, `rezyserzy` WHERE filmy.IDResyzera = rezyserzy.IDRezysera;
+3. SELECT COUNT(Tytul), Nazwisko FROM `rezyserzy`, `filmy` WHERE filmy.IDResyzera = rezyserzy.IDRezysera GROUP BY Nazwisko;
+4. SELECT COUNT(Tytul) AS Liczba_filmów, Imie , Nazwisko FROM `rezyserzy`, `filmy` WHERE filmy.IDResyzera = rezyserzy.IDRezysera GROUP BY Nazwisko ORDER BY COUNT(Tytul) DESC LIMIT 1;
+5. SELECT Tytul, Ocena FROM `recenzje`, `filmy` WHERE Ocena = '6' AND filmy.IDFilm = recenzje.IDFilm;
+6. SELECT Gatunek, COUNT(Tytul) AS Filmy FROM `filmy` GROUP BY Gatunek;
